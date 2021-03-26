@@ -1,22 +1,19 @@
 = 100+ challenging Golang programming exercises
 Carsten Brueggenolte <mail@cbrueggenolte.de>
-v1.0, March 2021
-:toc:
+v1.0.0, March 2021: Initial Document
 // Meta Data
 :description: Rewritten from the 100+ Python challenging programming exercises"
-:keyword: Golang, programming, exercises, challenges
+:keywords: Golang, programming, exercises, challenges
+:toc: preamble
 // Settings
 :icons: font
+:source-highlighter: highlightjs
+:sectnums:
 :url-project: https://github.com/cblte/100-golang-exercises/
 :url-issues: {url-project}/issues
-:sectnums:
 
-
-== About this repository
 
 These challenges come from a file called "100+ Python challenging programming exercises" I found somewhere on the internet. I want to rewrite all exercises for Golang!
-
-
 
 == Level description
 
@@ -47,13 +44,24 @@ Consider using strconv and strings.Join
 
 ==== Solution
 
----- go
-fmt.Println("Question 001")
-var numbers []string
-for i := 2000; i <= 3200; i++ {
-    if i%7 == 0 && i%5 != 0 {
-        numbers = append(numbers, strconv.Itoa(i))
-    }
+[source#exercise001, Go]
+----
+func main() {
+	fmt.Println("Exercise 001")
+	var numbers []string
+	for i := 2000; i <= 3200; i++ {
+		if i%7 == 0 && i%5 != 0 {
+			numbers = append(numbers, strconv.Itoa(i))
+		}
+	}
+	fmt.Println(strings.Join(numbers, ","))
 }
-fmt.Println(strings.Join(numbers, ","))
+----
+
+[source, ruby]
+----
+require 'sinatra'
+get '/hi' do
+    "Hello World"
+end
 ----
