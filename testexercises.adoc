@@ -58,6 +58,11 @@ func main() {
 }
 ----
 
+[source, go]
+----
+include::001/exercise-001.go[]
+----
+
 [source, ruby]
 ----
 require 'sinatra'
