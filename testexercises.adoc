@@ -60,7 +60,7 @@ func main() {
 
 [source, go]
 ----
-include::001/exercise-001.go[]
+include::https://github.com/cblte/asciiDocTest/blob/main/001/exercise-001.go[]
 ----
 
 [source, ruby]
@@ -70,3 +70,17 @@ get '/hi' do
     "Hello World"
 end
 ----
+
+
+
+[source]
+----
+\ifdef::env-github[] <1> (1)
+:imagesdir: https://gist.githubusercontent.com/path/to/gist/revision/dir/with/all/images
+endif::[]
+\ifndef::env-github[] <2>
+:imagesdir: ./
+endif::[]
+----
+<1> Use the `ifdef` to customize for online rendering (2)
+<2> Use the `ifndef` to customize for offline
