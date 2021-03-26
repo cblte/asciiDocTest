@@ -44,7 +44,7 @@ Consider using strconv and strings.Join
 
 ==== Solution
 
-[source#exercise001, Go]
+[source, go]
 ----
 func main() {
 	fmt.Println("Exercise 001")
